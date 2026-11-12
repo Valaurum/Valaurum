@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">Valentin — AI Engineer</title>
+<desc id="desc">Astral terminal with Orion, a slow radar sweep and a small telescope.</desc>
+<defs>
+  <radialGradient id="space" cx="78%" cy="45%" r="75%"><stop stop-color="#241b3e"/><stop offset=".6" stop-color="#10121f"/><stop offset="1" stop-color="#0b0e16"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#a28ac5" stroke-opacity=".055"/></pattern>
+  <linearGradient id="beam"><stop stop-color="#a78bda" stop-opacity="0"/><stop offset="1" stop-color="#a78bda" stop-opacity=".13"/></linearGradient>
+  <clipPath id="radar"><circle cx="940" cy="165" r="108"/></clipPath>
+</defs>
+<style>
+  text{font-family:'Source Code Pro','Consolas',monospace}
+  .muted{fill:#7e849d;font-size:11px;letter-spacing:2px}
+  .sweep{transform-origin:940px 165px;animation:orbit 28s linear infinite}
+  .pulse{animation:pulse 6s ease-in-out infinite}
+  .late{animation-delay:-3s}
+  .signal{animation:pulse 4s ease-in-out infinite}
+  @keyframes orbit{to{transform:rotate(360deg)}}
+  @keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+  @media(prefers-reduced-motion:reduce){.sweep,.pulse,.signal{animation:none}}
+</style>
+<rect x="1" y="1" width="1198" height="298" rx="12" fill="url(#space)" stroke="#303044"/>
+<rect x="1" y="1" width="1198" height="298" rx="12" fill="url(#grid)"/>
+<path d="M1 44H1199" stroke="#303044"/>
+<circle cx="25" cy="23" r="4" fill="#a28ac5"/><circle cx="42" cy="23" r="4" fill="#535468"/><circle cx="59" cy="23" r="4" fill="#34394b"/>
+<text x="84" y="27" class="muted">~/observatory</text>
+<text x="1157" y="27" text-anchor="end" class="muted">SYS.ONLINE</text>
+<text x="54" y="151" fill="#f0eff8" font-size="67" font-weight="700" letter-spacing="5">VALENTIN<tspan fill="#a990d6">_</tspan></text>
+<text x="58" y="196" fill="#c0a9e6" font-size="23" letter-spacing="5">AI ENGINEER</text>
+<path d="M58 223H111" stroke="#8a6ab6" stroke-width="2"/>
+<g fill="none" stroke="#8f7aaf" stroke-opacity=".17">
+<circle cx="940" cy="165" r="108"/><circle cx="940" cy="165" r="72"/>
+<path d="M824 165H1056M940 49V281" stroke-dasharray="2 8"/>
+</g>
+<g clip-path="url(#radar)"><g class="sweep"><path d="M940 165L1048 165A108 108 0 0 0 1016.4 88.6Z" fill="url(#beam)"/><path d="M940 165H1048" stroke="#b59bd9" stroke-opacity=".35"/></g></g>
+<!-- Simplified Orion: principal stars projected from right ascension and declination, east to the left. -->
+<g fill="none" stroke="#b5a1d0" stroke-width="1.1" stroke-opacity=".55">
+<path d="M892 88L937 76L960 98L944 158L935 166L925 172L892 88M925 172L909 242L984 229L944 158"/>
+<path d="M935 166L934 190L933 203" stroke-opacity=".3"/>
+</g>
+<g fill="#e0d6f3">
+<circle cx="892" cy="88" r="3.4" class="pulse"><title>Betelgeuse</title></circle>
+<circle cx="960" cy="98" r="2.7"><title>Bellatrix</title></circle>
+<circle cx="937" cy="76" r="1.6"><title>Meissa</title></circle>
+<circle cx="925" cy="172" r="2.4"><title>Alnitak</title></circle>
+<circle cx="935" cy="166" r="2.5"><title>Alnilam</title></circle>
+<circle cx="944" cy="158" r="2.1"><title>Mintaka</title></circle>
+<circle cx="984" cy="229" r="3.6" class="pulse late"><title>Rigel</title></circle>
+<circle cx="909" cy="242" r="2.5"><title>Saiph</title></circle>
+<circle cx="934" cy="190" r="1.3" opacity=".6"/><circle cx="933" cy="203" r="1.2" opacity=".5"/>
+</g>
+<g fill="#c4bdd9" opacity=".4"><circle cx="725" cy="86" r="1"/><circle cx="1110" cy="96" r="1.2"/><circle cx="753" cy="239" r="1.2"/><circle cx="1084" cy="193" r="1"/><circle cx="676" cy="191" r="1"/></g>
+<!-- Small telescope aimed towards the star field. -->
+<g transform="translate(1105 246)" fill="none" stroke="#a18abf" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".8">
+<path d="M0 0V13M0 13L-16 35M0 13L16 35M0 13V35"/>
+<g transform="rotate(-145)"><rect x="-25" y="-11" width="40" height="12" rx="2" fill="#211c31"/><path d="M15-14V4M-25-8H-33V-2H-25M-18-11V1M-2 1V8H4V1"/></g>
+</g>
+</svg>
